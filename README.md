@@ -1,12 +1,22 @@
 # Fake News Classification Using the Fakeddit Dataset
 
 ## Introduction
-- Fakeddit is a fine-grained multimodal fake news detection dataset, designed to advance efforts to combat the spread of misinformation in multiple modalities.
-- I worked on classifying data into 6 pre-defined classes: authentic/true news content, Satire/Parody, content with false connection, imposter content, manipulated content and misleading content.
-- For the Image-Feature Extractor, I used a pre-trained ```ResNet50 model``` trained on the ImageNet dataset for image classification tasks.
-- For the Text-Feature Extractor, I used a pre-trained ```Bertmodel``` trained on the English Wikipedia and Toronto Book Corpus in lower cased letters.
+Fakeddit is a fine-grained multimodal fake news detection dataset, designed to advance efforts to combat the spread of misinformation in multiple modalities.
+I worked on classifying the data in Fakeddit into 6 pre-defined classes: 
+- Authentic/true news content
+- Satire/Parody
+- Content with false connection
+- Imposter content
+- Manipulated content
+- Misleading content
+  
+For the Image-Feature Extractor, I used a pre-trained ```ResNet50 model``` trained on the ImageNet dataset for image classification tasks.  
+For the Text-Feature Extractor, I used a pre-trained ```Bertmodel``` trained on the English Wikipedia and Toronto Book Corpus in lower cased letters.
 
-    - Base Reference Paper: [r/Fakeddit: A New Multimodal Benchmark Dataset for Fine-grained Fake News Detection](https://aclanthology.org/2020.lrec-1.755/)
+- Base Reference Paper: [r/Fakeddit: A New Multimodal Benchmark Dataset for Fine-grained Fake News Detection](https://aclanthology.org/2020.lrec-1.755/)
+ 
+## Problem Statement
+Fake news has altered society in negative ways in politics and culture. It has adversely affected both online social network systems as well as offline communities and conversations. Using automatic machine learning classification models is an efficient way to combat the widespread dissemination of fake news. However, a lack of effective, comprehensive datasets has been a problem for fake news research and detection model development. Prior fake news datasets do not provide multimodal text and image data, metadata, comment data, and fine-grained fake news categorization at the scale and breadth of our dataset. Fakeddit is a novel multimodal dataset consisting of over 1 million samples from multiple categories of fake news. The goal is to construct hybrid text+image models and perform extensive experiments for multiple variations of classification, demonstrating the importance of the novel aspect of multimodality and fine-grained classification unique to Fakeddit.
  
 ## Model Architecture
 
@@ -26,4 +36,7 @@ Sample Model Architecture:
 -  Late fusion processes the data of each sensor independently to make a local prediction. These individual results are then combined at a higher level to make the final fused prediction.
 - The advantage of late fusion is its simplicity and isolation. Each model gets to learn super rich information on its modality.
 
+---
 
+The multi-modal feature extraction by Text-Image-Model yielded an overall performance of *77.46%* accuracy on test results.  
+(Originally completed for Web Enthusiasts Club Recruitments 2024)
