@@ -36,6 +36,33 @@ Sample Model Architecture:
 -  Late fusion processes the data of each sensor independently to make a local prediction. These individual results are then combined at a higher level to make the final fused prediction.
 - The advantage of late fusion is its simplicity and isolation. Each model gets to learn super rich information on its modality.
 
+
+## Running the Streamlit App
+1. Ensure that you have installed Git on your system.
+You can check the installation using: 
+
+```
+git --version
+```
+
+2. Install streamlit
+```
+pip install streamlit
+```
+3. To run the app, please follow the given instructions:
+
+    - Clone the repository onto your local system
+    ```
+    git clone https://github.com/Vanshika-Mittal/Fake-News-Multimodal-Classification/tree/master
+    ```
+    - After this:
+    ```
+    cd Fakeddit-WebApp
+    ```
+    - After this:
+    ```
+    streamlit run app.py
+    ```
 ---
 
 The multi-modal feature extraction by Text-Image-Model yielded an overall performance of *77.46%* accuracy on test results.  
